@@ -38,7 +38,7 @@ head(df_seguidores)
 # Selecionando os 10 seguidores com mais seguidores
 top_seguidores = df_seguidores %>%
   mutate(data = as.Date(created, format = "%Y-%m-%d"),
-         hoje = as.Date("2023-12-03", format = "%Y-%m-%d"),
+         hoje = as.Date("2022-12-03", format = "%Y-%m-%d"),
          dias = as.numeric(hoje - data),
          quantidadeStatus_porDia = statusesCount / dias) %>%
   select(screenName, followersCount, quantidadeStatus_porDia) %>%
@@ -49,7 +49,7 @@ head(top_seguidores)
 # Selecionando os 10 seguidores com mais tweets por dia
 top_tweets = df_seguidores %>%
   mutate(data = as.Date(created, format = "%Y-%m-%d"),
-         hoje = as.Date("2023-12-03", format = "%Y-%m-%d"),
+         hoje = as.Date("2022-12-03", format = "%Y-%m-%d"),
          dias = as.numeric(hoje - data),
          quantidadeStatus_porDia = statusesCount / dias) %>%
   select(screenName, followersCount, quantidadeStatus_porDia) %>%
